@@ -15,7 +15,7 @@
   <% end %>
  
 
-  <form method="post" action="/models/<%= @model.id %>/delete">
+  <form method="post" action="/posts/<%= @post.id %>/delete">
     <input id="hidden" type="hidden" name="_method" value="DELETE">
     <input type="submit" value="delete">
   </form>
