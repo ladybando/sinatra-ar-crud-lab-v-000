@@ -1,11 +1,11 @@
  <!DOCTYPE html>
 <html>
   <head>
-    <title>Team & Heroes</title>
+    <title>Blog Post</title>
   </head>
 <body>
-    <h1>Team Name:<%= @team.name %></h2>
-    <h2>Team Motto: <%= @team.motto %></h3>
+    <h1><%= @post.name %></h2>
+    <p> <%= @post.content %></p>
   <br>
 
 <h1>Heroes</h1>
@@ -15,10 +15,11 @@
   <h4>Hero Biography: <%= hero.bio %></h4>
   <br>
   <% end %>
-  </body>
-  </html>
+ 
 
-<form method="post" action="/models/<%= @model.id %>/delete">
-  <input id="hidden" type="hidden" name="_method" value="DELETE">
-  <input type="submit" value="delete">
-</form>
+  <form method="post" action="/models/<%= @model.id %>/delete">
+    <input id="hidden" type="hidden" name="_method" value="DELETE">
+    <input type="submit" value="delete">
+  </form>
+ </body>
+</html>
